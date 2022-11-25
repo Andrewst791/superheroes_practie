@@ -1,0 +1,41 @@
+###
+POST http://localhost:5600/api/v1/users/user HTTP/1.1
+Content-Type: application/json
+
+{
+  "real_name": "Diana",
+  "super_name": "Zapata",
+  "power": "Laser",
+  "city": "Manizales"
+}
+
+###
+GET http://localhost:5600/api/v1/users/ HTTP/1.1
+
+###
+GET http://localhost:5600/api/v1/users/636fabc8d6ebb3e7a9fd357b HTTP/1.1
+
+###
+PUT http://localhost:5600/api/v1/users/636fabc8d6ebb3e7a9fd357b HTTP/1.1
+Content-Type: application/json
+
+{
+    "user_name": "Diana",
+    "last_name": "Zapata",
+    "age": 32,
+    "document": "456123789",
+    "email": "diana.zapata@gmail.com.co",
+    "address": {
+      "city": "Pereira",
+      "code_zip": "6620001"
+    },
+    "pets": [
+      "Odie",
+      "Toto",
+      "Bolt",
+      "Niña"
+    ]
+  }
+
+###
+DELETE http://localhost:5600/api/v1/users/636fabc8d6ebb3e7a9fd357b HTTP/1.1
