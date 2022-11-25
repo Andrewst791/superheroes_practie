@@ -1,41 +1,30 @@
 ###
-POST http://localhost:5600/api/v1/users/user HTTP/1.1
+POST http://localhost:5600/api/v1/superheroes/superheroe HTTP/1.1
 Content-Type: application/json
 
 {
-  "real_name": "Diana",
+  "real_name": "Santiago",
   "super_name": "Zapata",
-  "power": "Laser",
+  "power": "Fuerza",
+  "city": "Bogota"
+}
+
+###
+GET http://localhost:5600/api/v1/superheroes/ HTTP/1.1
+
+###
+GET http://localhost:5600/api/v1/superheroes/638143987b5b4b9cf08099b2 HTTP/1.1
+
+###
+PUT http://localhost:5600/api/v1/superheroes/638143987b5b4b9cf08099b2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "real_name": "Fernando",
+  "super_name": "Zapata",
+  "power": "Lava",
   "city": "Manizales"
 }
 
 ###
-GET http://localhost:5600/api/v1/users/ HTTP/1.1
-
-###
-GET http://localhost:5600/api/v1/users/636fabc8d6ebb3e7a9fd357b HTTP/1.1
-
-###
-PUT http://localhost:5600/api/v1/users/636fabc8d6ebb3e7a9fd357b HTTP/1.1
-Content-Type: application/json
-
-{
-    "user_name": "Diana",
-    "last_name": "Zapata",
-    "age": 32,
-    "document": "456123789",
-    "email": "diana.zapata@gmail.com.co",
-    "address": {
-      "city": "Pereira",
-      "code_zip": "6620001"
-    },
-    "pets": [
-      "Odie",
-      "Toto",
-      "Bolt",
-      "Niña"
-    ]
-  }
-
-###
-DELETE http://localhost:5600/api/v1/users/636fabc8d6ebb3e7a9fd357b HTTP/1.1
+DELETE http://localhost:5600/api/v1/superheroes/638143987b5b4b9cf08099b2 HTTP/1.1

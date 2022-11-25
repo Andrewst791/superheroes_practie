@@ -24,9 +24,9 @@ superheroe_routes.get('/:superheroe_id', (req, res)=>{
 })
 superheroe_routes.put('/:superheroe_id', (req, res)=>{
     const {superheroe_id} = req.params
-    const{user_name, last_name, age, document, email, address, pets} = req.body
+    const{real_name, super_name, power, city} = req.body
     superheroe_model
-        .updateOne({ _id: superheroe_id },{$set:{user_name, last_name, age, document, email, address, pets}})
+        .updateOne({ _id: superheroe_id },{$set:{real_name, super_name, power, city}})
         .then(data=>res.json(data))
         .catch(error=>res.json({message:error}))
 })
